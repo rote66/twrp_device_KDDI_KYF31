@@ -1,8 +1,6 @@
 DEVICE_PATH := device/KDDI/KYF31
-USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/KDDI/KYF31/BoardConfigVendor.mk
 -include $(DEVICE_PATH)/config/*.mk
 
 # Bootloader
@@ -20,6 +18,10 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
+
+TARGET_NO_BOOTLOADER := false
+TARGET_NO_KERNEL := false
+
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 no_console_suspend=1 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.selinux=permissive
@@ -40,9 +42,3 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 
-# SELinux policies
-# qcom sepolicy
-#include device/qcom/sepolicy/sepolicy.mk
-
-#BOARD_SEPOLICY_DIRS += \
-        $(LOCAL_PATH)/sepolicy

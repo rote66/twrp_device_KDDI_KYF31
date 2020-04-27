@@ -16,8 +16,6 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_INCLUDE_FUSE_EXFAT := true
 #NTFS Support
 TW_INCLUDE_FUSE_NTFS := true
-#F2FS
-TW_INCLUDE_FUSE_F2FS := true
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
@@ -38,3 +36,7 @@ TW_NO_EXFAT_FUSE := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+
+# Treble
+BOARD_NEEDS_VENDORIMAGE_SYMLINK := false
+TARGET_COPY_OUT_VENDOR := vendor
