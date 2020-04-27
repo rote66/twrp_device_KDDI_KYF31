@@ -1,0 +1,46 @@
+From 74e6ed237387bdd2484d3613291400d912287b94 Mon Sep 17 00:00:00 2001
+From: rote66 <pontifex23872388@gmail.com>
+Date: Tue, 28 Apr 2020 00:04:43 +0800
+Subject: [PATCH] fix for gcc8/9
+
+Change-Id: I6ad46cb3e372e1797f4f9069bf93e0eb07754532
+---
+ tools/Android.mk    | 4 ++--
+ tools/check_seapp.c | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/tools/Android.mk b/tools/Android.mk
+index d749dd6..ef37078 100644
+--- a/tools/Android.mk
++++ b/tools/Android.mk
+@@ -5,7 +5,7 @@ include $(CLEAR_VARS)
+ LOCAL_MODULE := checkseapp
+ LOCAL_MODULE_TAGS := optional
+ LOCAL_C_INCLUDES := external/libsepol/include/
+-LOCAL_CFLAGS := -DLINK_SEPOL_STATIC -Wall -Werror
++LOCAL_CFLAGS := -DLINK_SEPOL_STATIC -Wall -Werror -Wno-stringop-truncation
+ LOCAL_SRC_FILES := check_seapp.c
+ LOCAL_STATIC_LIBRARIES := libsepol
+ 
+@@ -46,4 +46,4 @@ LOCAL_STATIC_LIBRARIES := libsepol
+ 
+ include $(BUILD_HOST_EXECUTABLE)
+ 
+-include $(call all-makefiles-under,$(LOCAL_PATH))
+\ No newline at end of file
++include $(call all-makefiles-under,$(LOCAL_PATH))
+diff --git a/tools/check_seapp.c b/tools/check_seapp.c
+index 39fe77e..41d0dbf 100644
+--- a/tools/check_seapp.c
++++ b/tools/check_seapp.c
+@@ -737,6 +737,7 @@ static void handle_options(int argc, char *argv[]) {
+ 						"Unknown option character `\\x%x'.\n",
+ 						optopt);
+ 			}
++			break;
+ 		default:
+ 			exit(EXIT_FAILURE);
+ 		}
+-- 
+2.26.2
+

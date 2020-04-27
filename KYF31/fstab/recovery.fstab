@@ -1,0 +1,36 @@
+# Added backup flag for recovery, otherwise it doesn't appear
+# mount point	fstype		device						flags
+
+/system		      ext4		/dev/block/bootdevice/by-name/system
+/system_image   emmc    /dev/block/bootdevice/by-name/system
+/cache		      ext4		/dev/block/bootdevice/by-name/cache
+/data		        ext4		/dev/block/bootdevice/by-name/userdata  flags=encryptable=footer
+/boot		        emmc		/dev/block/bootdevice/by-name/boot
+/recovery	      emmc		/dev/block/bootdevice/by-name/recovery  flags=backup=1
+/firmware       vfat    /dev/block/bootdevice/by-name/modem     flags=backup=1
+/persistent     emmc    /dev/block/bootdevice/by-name/config    flags=backup=1
+/misc           emmc    /dev/block/bootdevice/by-name/misc      flags=backup=1
+/DDR            emmc	/dev/block/bootdevice/by-name/DDR
+/aboot          emmc	/dev/block/bootdevice/by-name/aboot
+/cfg            emmc	/dev/block/bootdevice/by-name/cfg
+/cmnlib         emmc	/dev/block/bootdevice/by-name/cmnlib
+/devinfo        emmc	/dev/block/bootdevice/by-name/devinfo
+/echarge        emmc	/dev/block/bootdevice/by-name/echarge
+/fsc            emmc	/dev/block/bootdevice/by-name/fsc
+/fsg            emmc	/dev/block/bootdevice/by-name/fsg
+/keymaster      emmc	/dev/block/bootdevice/by-name/keymaster
+/keystore       emmc	/dev/block/bootdevice/by-name/keystore
+/metadata       emmc	/dev/block/bootdevice/by-name/metadata
+/modem          emmc	/dev/block/bootdevice/by-name/modem
+/modemst1       emmc	/dev/block/bootdevice/by-name/modemst1
+/modemst2       emmc	/dev/block/bootdevice/by-name/modemst2
+/oem            emmc	/dev/block/bootdevice/by-name/oem
+/pad            emmc	/dev/block/bootdevice/by-name/pad
+/persist        emmc	/dev/block/bootdevice/by-name/persist
+/rpm            emmc	/dev/block/bootdevice/by-name/rpm
+/sbl1           emmc	/dev/block/bootdevice/by-name/sbl1
+/sec            emmc	/dev/block/bootdevice/by-name/sec
+/splash         emmc	/dev/block/bootdevice/by-name/splash
+/ssd            emmc	/dev/block/bootdevice/by-name/ssd
+/tz             emmc	/dev/block/bootdevice/by-name/tz
+# /dev/block/mmcblk1p1                       /sdcard         vfat    nosuid,nodev,barrier=1,data=ordered,nodelalloc                  wait
