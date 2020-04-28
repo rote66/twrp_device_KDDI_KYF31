@@ -42,3 +42,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 
+# Sepolicy hack for old kernel, our msm8909 version is 28
+POLICYVERS := 28
+
