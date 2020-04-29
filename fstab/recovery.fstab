@@ -8,7 +8,7 @@
 /boot		        emmc		/dev/block/platform/soc/7824900.sdhci/by-name/boot
 /recovery	      emmc		/dev/block/platform/soc/7824900.sdhci/by-name/recovery  flags=backup=1
 /firmware       vfat    /dev/block/platform/soc/7824900.sdhci/by-name/modem     flags=backup=1
-/persistent     emmc    /dev/block/platform/soc/7824900.sdhci/by-name/config    flags=backup=1
+/frp     emmc    /dev/block/platform/soc/7824900.sdhci/by-name/config    flags=backup=1
 /misc           emmc    /dev/block/platform/soc/7824900.sdhci/by-name/misc      flags=backup=1
 /aboot          emmc	/dev/block/platform/soc/7824900.sdhci/by-name/aboot
 /devinfo        emmc	/dev/block/platform/soc/7824900.sdhci/by-name/devinfo
@@ -17,6 +17,7 @@
 /keystore       emmc	/dev/block/platform/soc/7824900.sdhci/by-name/keystore
 /modemst1       emmc	/dev/block/platform/soc/7824900.sdhci/by-name/modemst1
 /modemst2       emmc	/dev/block/platform/soc/7824900.sdhci/by-name/modemst2
+/sysprop        ext4	/dev/block/platform/soc/7824900.sdhci/by-name/sysprop
 /oem            emmc	/dev/block/platform/soc/7824900.sdhci/by-name/oem
 /persist        emmc	/dev/block/platform/soc/7824900.sdhci/by-name/persist
 /rpm            emmc	/dev/block/platform/soc/7824900.sdhci/by-name/rpm

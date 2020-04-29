@@ -16,7 +16,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 include $(call all-subdir-makefiles)
 
 # Charger
-PRODUCT_PACKAGES += charger charger_res_images
+#PRODUCT_PACKAGES += charger charger_res_images
 
 # Encryption
 #PRODUCT_PACKAGES += libcryptfs_hw
