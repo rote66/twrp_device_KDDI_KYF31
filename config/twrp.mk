@@ -37,7 +37,11 @@ TW_EXCLUDE_SUPERSU := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-##TW_USE_TOOLBOX := true
+#TW_USE_TOOLBOX := true
+
+# Logging
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
 
 # Treble
 BOARD_NEEDS_VENDORIMAGE_SYMLINK := false

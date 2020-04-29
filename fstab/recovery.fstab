@@ -1,29 +1,29 @@
 # Added backup flag for recovery, otherwise it doesn't appear
 # mount point	fstype		device						flags
 
-/system		      ext4		/dev/block/platform/soc/7824900.sdhci/by-name/system
-/system_image   emmc    /dev/block/platform/soc/7824900.sdhci/by-name/system
-/cache		      ext4		/dev/block/platform/soc/7824900.sdhci/by-name/cache
-/data		        ext4		/dev/block/platform/soc/7824900.sdhci/by-name/userdata  flags=encryptable=footer
-/boot		        emmc		/dev/block/platform/soc/7824900.sdhci/by-name/boot
-/recovery	      emmc		/dev/block/platform/soc/7824900.sdhci/by-name/recovery  flags=backup=1
-/firmware       vfat    /dev/block/platform/soc/7824900.sdhci/by-name/modem     flags=backup=1
-/frp     emmc    /dev/block/platform/soc/7824900.sdhci/by-name/config    flags=backup=1
-/misc           emmc    /dev/block/platform/soc/7824900.sdhci/by-name/misc      flags=backup=1
-/aboot          emmc	/dev/block/platform/soc/7824900.sdhci/by-name/aboot
-/devinfo        emmc	/dev/block/platform/soc/7824900.sdhci/by-name/devinfo
-/fsc            emmc	/dev/block/platform/soc/7824900.sdhci/by-name/fsc
-/fsg            emmc	/dev/block/platform/soc/7824900.sdhci/by-name/fsg
-/keystore       emmc	/dev/block/platform/soc/7824900.sdhci/by-name/keystore
-/modemst1       emmc	/dev/block/platform/soc/7824900.sdhci/by-name/modemst1
-/modemst2       emmc	/dev/block/platform/soc/7824900.sdhci/by-name/modemst2
-/sysprop        ext4	/dev/block/platform/soc/7824900.sdhci/by-name/sysprop
-/oem            emmc	/dev/block/platform/soc/7824900.sdhci/by-name/oem
-/persist        emmc	/dev/block/platform/soc/7824900.sdhci/by-name/persist
-/rpm            emmc	/dev/block/platform/soc/7824900.sdhci/by-name/rpm
-/sbl1           emmc	/dev/block/platform/soc/7824900.sdhci/by-name/sbl1
-/sec            emmc	/dev/block/platform/soc/7824900.sdhci/by-name/sec
-/splash         emmc	/dev/block/platform/soc/7824900.sdhci/by-name/splash
-/ssd            emmc	/dev/block/platform/soc/7824900.sdhci/by-name/ssd
-/tz             emmc	/dev/block/platform/soc/7824900.sdhci/by-name/tz
+/system		      ext4		/dev/block/bootdevice/by-name/system
+/system_image   emmc    /dev/block/bootdevice/by-name/system
+/cache		      ext4		/dev/block/bootdevice/by-name/cache
+/data		        ext4		/dev/block/bootdevice/by-name/userdata  flags=encryptable=footer
+/boot		        emmc		/dev/block/bootdevice/by-name/boot
+/recovery	      emmc		/dev/block/bootdevice/by-name/recovery  flags=backup=1
+/firmware       vfat    /dev/block/bootdevice/by-name/modem     flags=backup=1
+/frp     emmc    /dev/block/bootdevice/by-name/config    flags=backup=1
+/misc           emmc    /dev/block/bootdevice/by-name/misc      flags=backup=1
+/aboot          emmc	/dev/block/bootdevice/by-name/aboot
+/devinfo        emmc	/dev/block/bootdevice/by-name/devinfo
+/fsc            emmc	/dev/block/bootdevice/by-name/fsc
+/fsg            emmc	/dev/block/bootdevice/by-name/fsg
+/keystore       emmc	/dev/block/bootdevice/by-name/keystore
+/modemst1       emmc	/dev/block/bootdevice/by-name/modemst1
+/modemst2       emmc	/dev/block/bootdevice/by-name/modemst2
+/sysprop        ext4	/dev/block/bootdevice/by-name/sysprop
+/oem            emmc	/dev/block/bootdevice/by-name/oem
+/persist        emmc	/dev/block/bootdevice/by-name/persist
+/rpm            emmc	/dev/block/bootdevice/by-name/rpm
+/sbl1           emmc	/dev/block/bootdevice/by-name/sbl1
+/sec            emmc	/dev/block/bootdevice/by-name/sec
+/splash         emmc	/dev/block/bootdevice/by-name/splash
+/ssd            emmc	/dev/block/bootdevice/by-name/ssd
+/tz             emmc	/dev/block/bootdevice/by-name/tz
 # /dev/block/mmcblk1p1                       /sdcard         vfat    nosuid,nodev,barrier=1,data=ordered,nodelalloc                  wait
