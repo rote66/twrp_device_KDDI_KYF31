@@ -1,7 +1,7 @@
 DEVICE_PATH := device/KDDI/KYF31
 
 # inherit from the proprietary version
--include $(DEVICE_PATH)/config/*.mk
+-include $(DEVICE_PATH)/twrp.mk
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8909
@@ -40,7 +40,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/zImage
 
 # Sepolicy hack for old kernel, our msm8909 version is 28
 POLICYVERS := 28
