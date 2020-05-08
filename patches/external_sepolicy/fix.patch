@@ -1,0 +1,25 @@
+From 74e6ed237387bdd2484d3613291400d912287b94 Mon Sep 17 00:00:00 2001
+From: rote66 <pontifex23872388@gmail.com>
+Date: Tue, 28 Apr 2020 00:04:43 +0800
+Subject: [PATCH] fix for gcc8/9
+
+Change-Id: I6ad46cb3e372e1797f4f9069bf93e0eb07754532
+---
+ tools/check_seapp.c | 1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/tools/check_seapp.c b/tools/check_seapp.c
+index 39fe77e..41d0dbf 100644
+--- a/tools/check_seapp.c
++++ b/tools/check_seapp.c
+@@ -737,6 +737,7 @@ static void handle_options(int argc, char *argv[]) {
+ 						"Unknown option character `\\x%x'.\n",
+ 						optopt);
+ 			}
++			break;
+ 		default:
+ 			exit(EXIT_FAILURE);
+ 		}
+-- 
+2.26.2
+

@@ -1,18 +1,11 @@
 LOCAL_PATH := device/KDDI/KYF31
 
 ## Specify phone tech before including full_phone
-
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/core.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit some common CM stuff.
-#$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-#$(call inherit-product, vendor/omni/config/gsm.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
-#$(call inherit-product, build/target/product/embedded.mk)
 
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
- 
 include $(call all-subdir-makefiles)
 
 # Charger
