@@ -14,7 +14,7 @@ Storage | 8 GB
 MicroSD | Up to 32GB
 Battery | 1500 mAh (removable)
 Dimensions | 51 x 113 x 16.7 mm
-Display | 720 x 11280 pixels, 5.3" IGZO
+Display | 480 x 854 pixels, 3.4" TFT
 Rear Camera  | 0.8 MP, LED flash
 
 ![Kyocera KYF31](https://www.kyocera.co.jp/prdct/telecom/consumer/lineup/kyf31-kyf34/img/top_main-visual.jpg "Kyocera KYF31")
